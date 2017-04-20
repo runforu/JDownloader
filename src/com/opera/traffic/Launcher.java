@@ -77,10 +77,10 @@ public class Launcher implements RoundCompleted {
 
         @Override
         public boolean isDesired(LinkTag lt) {
-            if (lt.getChildrenHTML().trim().isEmpty()) {
+            if (lt.toHtml().trim().isEmpty()) {
                 return true;
             }
-            Matcher matcher = mPattern.matcher(lt.getChildrenHTML().trim());
+            Matcher matcher = mPattern.matcher(lt.toHtml().trim());
             if (matcher.matches()) {
                 return true;
             }

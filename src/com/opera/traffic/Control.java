@@ -287,7 +287,6 @@ public class Control implements HttpClientHelper.Listener {
         if (node instanceof LinkTag) // <a>
         {
             LinkTag link = (LinkTag) node;
-            //System.out.println(link.toHtml());
             addNewLink(link, host);
         }
     }
